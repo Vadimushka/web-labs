@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Лабораторная № 5: Вариант 1 - Задание 1</title>
+<meta charset="utf-8" />
+<script type="text/javascript" src="labs5-v1_ex1.js"></script>
+<style>
+body {background-color: PaleGreen; font-weight: bold;}
+input {font-weight: bold}
+</style>
+</head>
+
+<body>
+<h1>Страничка по заказу</h1>
+<form>
+<table>
+
+<tr>
+<td><label for="title">Заголовок: </label></td>
+<td><input type="text" id="title" size="20"></td>
+</tr>
+
+<tr>
+<td rowspan="3">Картинка: </td>
+<td><input type="checkbox" id="dog"><label for="place">Собака</label></td>
+</tr>
+
+<tr>
+<td><input type="checkbox" id="flower"><label for="flower">Одинокий цветок</label></td>
+</tr>
+
+<tr>
+<td><input type="checkbox" id="bigdaisy"><label for="bigdaisy">Букет</label></td>
+</tr>
+
+<tr>
+<td><label for="signature">Подпись: </label></td>
+<td><input type="text" id="signature" size="35"></td>
+</tr>
+
+<tr>
+<td>Цвет фона</td>
+<td style="padding-left: 72px">Цвет текста</td>
+</tr>
+
+<tr>
+<td>
+<select>
+<option id="backroungBlue" value="blue"> Синий
+<option id="backroungWhite" value="white"> Белый
+<option id="backroungBlack" value="black"> Черный
+</select>
+</td>
+<td><label for="colorWhite"><img src="white.jpg"></label> <input type="radio" id="colorWhite" name="color_text"></td>
+</tr>
+
+<tr>
+<td></td>
+<td><label for="colorBlack"><img src="black.jpg"></label> <input type="radio" id="colorBlack" name="color_text"></td>
+</tr>
+
+<tr>
+<td></td>
+<td><label for="colorBlue"><img src="blue.jpg"></label> <input type="radio" id="colorBlue" name="color_text"></td>
+</tr>
+
+<tr>
+<td><input type="reset" value="Сбросить"></td>
+<td><input type="button" value="Показать" onClick="generated()"></td>
+</tr>
+
+</table>
+
+
+<hr>
+</form>
+</body>
+</html>

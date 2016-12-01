@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Лабораторная № 5: Вариант 2 - Задание 1</title>
+<meta charset="utf-8" />
+<script type="text/javascript" src="labs5-v2_ex1.js"></script>
+<style>
+body {background-color: PaleGreen; font-weight: bold;}
+input {font-weight: bold}
+</style>
+</head>
+
+<body>
+<h1>Страничка по заказу</h1>
+<form>
+<table>
+<tr>
+<td>Художник:</td>
+<td><select>
+<option id="painter1">Айвазовский
+<option id="painter2">Репин
+<option id="painter3">Тропинин
+</select></tr>
+<tr>
+<td><label for="signature">Подпись: </label></td>
+<td><input type="text" id="signature"></td></tr>
+
+<tr>
+<td>Картинка для фона:</td>
+<td>Декорирование текста:</td>
+</tr>
+
+<tr>
+<td><input type="radio" id="imgFon1" name="img"><label for="imgFon1">Картинка 1</label> </td>
+<td><input type="checkbox" id="italic"><label for="italic">курсив</label></td>
+</tr>
+
+<tr>
+<td><input type="radio" id="imgFon2" name="img"><label for="imgFon2">Картинка 2</label> </td>
+<td><input type="checkbox" id="underline"><label for="underline">подчеркивание</label></td>
+</tr>
+
+<tr>
+<td><input type="radio" id="imgFon3" name="img"><label for="imgFon3">Картинка 3</label> </td>
+<td><input type="checkbox" id="bold"><label for="bold">жирный</label></td>
+</tr>
+
+
+<tr>
+<td><input type="reset" value="Сбросить"></td>
+<td><input type="button" value="Показать" onClick="generated()"></td>
+</tr>
+</table>
+</form>
+</body>
+</html>

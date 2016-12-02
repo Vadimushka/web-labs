@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Лабораторная № 3: Вариант 1 - Задание 3</title>
+<meta charset="utf-8" />
+<script type="text/javascript">
+function calculation(){
+	var x = parseInt(document.getElementById('x').value);
+	var y = parseInt(document.getElementById('y').value);
+	
+	var result = Math.sqrt(Math.pow(x,2) + Math.pow(y,2));
+	
+	alert(result);
+}
+</script>
+<style>
+body {background-color: PaleGreen; font-weight: bold;}
+h1 {color: red; text-align: center;}
+input {font-weight: bold}
+</style>
+</head>
+
+<body>
+<h1>Расстояние от точки до начала координат</h1>
+<hr>
+<form>
+<p>Введите координаты точки:</p>
+<p><label for="x">X: </label> <input type="text" id="x" size="3"></p>
+<p><label for="y">Y: </label> <input type="text" id="y" size="3"></p>
+
+<input type="button" value="Расстояние" onClick="calculation()">
+<hr>
+</form>
+</body>
+</html>

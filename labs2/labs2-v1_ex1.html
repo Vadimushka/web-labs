@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Лабораторная № 2: Вариант 1 - Задание 1</title>
+<meta charset="utf-8" />
+<script type="text/javascript">
+function time(){
+	var hour = parseInt(prompt("Введите количество часов: "));
+	var minutes = parseInt(prompt("Введите количество минут: "));
+
+	if((hour == 23) && (minutes == 59)){
+		hour = 0;
+		minutes = 0;
+	} else if((minutes == 59)){
+		hour++;
+		minutes = 0;
+	} else {
+		minutes++;
+	}
+
+	alert("Через минуту будет " + hour + " час и " + minutes + " мин");
+}
+</script>
+</head>
+
+<body>
+<button onClick="time()">Рассчет времени</button>
+
+</body>
+</html>

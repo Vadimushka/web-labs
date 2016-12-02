@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Лабораторная № 7: Вариант 1 - Задание 1</title>
+<meta charset="utf-8" />
+<script type="text/javascript">
+i = 0;
+function change() {
+	borderImg = document.getElementById('borderImg');
+	el = document.getElementById('el');
+	
+	if (i == 0){
+		borderImg.style.borderColor = '#0000ff';
+		el.value = 'изменить цвет рамки на серый';
+		i = 1;
+	} else {
+		borderImg.style.borderColor = '#808080';
+		el.value = 'изменить цвет рамки';
+		i = 0;
+	}
+}
+</script>
+<style>
+.borderImg {
+border: 50px inset #808080;
+}
+</style>
+
+</head>
+
+<body>
+<img id="borderImg" src="flower.jpg" class="borderImg">
+<br><input type="button" id="el" value="изменить цвет рамки" onclick="change();">
+
+</body>
+</html>

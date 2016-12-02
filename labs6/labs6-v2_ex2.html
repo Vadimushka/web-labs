@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Лабораторная № 6: Вариант 2 - Задание 2</title>
+<meta charset="utf-8" />
+<script type="text/javascript">
+i=0;
+function slideShow() {
+	ris = new Array('mamont.jpg', 'shark_l.jpg', 'begemot.jpg');
+	
+	if (i >= 3) i = 0;
+	r = document.getElementById('slide')
+	r.src = ris[i];
+	i++; 
+}
+</script>
+<style>
+body{
+background-color:#dfd8c5;
+}
+table tr td {
+    width:150px;
+    height:150px;
+    text-align:center;
+	blue
+}
+</style>
+</head>
+
+<body>
+<h1> слайд-шоу </h1>
+<img id='slide' src="begemot.jpg" /><br>
+<br><input type="button" value=" Показать следующую " onClick="slideShow() ;">
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Лабораторная № 4: Вариант 1 - Задание 1</title>
+<meta charset="utf-8" />
+<script type="text/javascript">
+function generatedBio(){
+	var surname = document.getElementById('surname').value,
+		name = document.getElementById('name').value,
+		lastname = document.getElementById('lastname').value,
+		year = document.getElementById('year').value,
+		place = document.getElementById('place').value,
+		like = document.getElementById('like').value,
+		noLike = document.getElementById('noLike').value;
+	
+	var win = window.open("", "", "width=500,height=300");
+	
+	win.document.open();
+	
+	var str = '<h1>О себе</h1><hr><p>';
+	win.document.write(str);
+	
+	str = 'Я, ' + surname + ' ' + name + ' ' + lastname + ' родился в ' + year + ' году в городе ' + place + '</p><br><p>';
+	win.document.write(str);
+	
+	str = 'Больше всего я люблю ' + like + ' и очень не люблю ' + noLike + '. Было бы замечательно, всю жизнь только ' + like + ', но к сожалению приходится иногда и ' + noLike + '.</p>';
+	win.document.write(str);
+	
+	str = '<input type="button" value="Закрыть" onClick="window.close();" >';
+	win.document.write(str);
+	
+	win.document.close();
+	
+}
+</script>
+<style>
+body {background-color: PaleGreen; font-weight: bold;}
+h1 {color: red; text-align: center;}
+input {font-weight: bold}
+</style>
+</head>
+
+<body>
+<h1>Анкета</h1>
+<hr>
+<form>
+<table>
+<tr>
+<td><label for="surname">Фамилия: </label></td>
+<td><input type="text" id="surname"></td></tr>
+<tr>
+<td><label for="name">Имя: </label></td>
+<td><input type="text" id="name"></td></tr>
+<tr>
+<td><label for="lastname">Отчество: </label></td>
+<td><input type="text" id="lastname"></td></tr>
+<tr>
+<td><label for="year">Год рождения: </label></td>
+<td><input type="text" id="year"></td></tr>
+<tr>
+<td><label for="place">Место рождения: </label></td>
+<td><input type="text" id="place"></td></tr>
+<tr>
+<td><label for="like">Любимое занятие: </label></td>
+<td><input type="text" id="like"></td></tr>
+<tr>
+<td><label for="noLike">Не любимое занятие: </label></td>
+<td><input type="text" id="noLike"></td></tr>
+</table>
+
+<input type="button" value="Сформировать биографию" onClick="generatedBio()">
+<hr>
+</form>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Лабораторная № 1: Вариант 1 - Задание 3</title>
+<meta charset="utf-8" />
+<script type="text/javascript">
+var col = 10;
+var color;
+
+document.write('<div style="float: left">');
+document.write('<table>');
+for(i = 1; i <= col; i++){
+	document.write("<tr>");
+		for(j = 1; j <= col; j++){
+			if (j <= i){
+				color = "yellow"; 
+			} else {
+				color = "blue";
+			}
+			document.write('<td style="width: 45px; height: 45px; background-color:' + color + '"></td>');
+		}
+	document.write("</tr>");
+}
+document.write("</table>");
+document.write("</div>");
+
+
+document.write('<div style="float: right">');
+document.write('<table>');
+for(i = 1; i <= col; i++){
+	document.write("<tr>");
+		for(j = 1; j <= col; j++){
+			if((i + j)%3 == 0) {
+				color = "Plum";
+			} else {
+				color = "Navy";
+			}
+			document.write('<td style="width: 45px; height: 45px;color: white; background-color:' + color + '"></td>');
+		}
+	document.write("</tr>");
+}
+document.write("</table>");
+document.write("</div>");
+</script>
+</head>
+
+<body>
+</body>
+</html>

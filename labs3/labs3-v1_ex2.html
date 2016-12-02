@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Лабораторная № 3: Вариант 1 - Задание 2</title>
+<meta charset="utf-8" />
+<script type="text/javascript">
+function happyYear(){
+var input = document.getElementById('colDays');
+	
+var year = prompt("Введите год рождения [xxxx]:");
+var month = prompt("Введите номер месяца рождения [1-12]:");
+var days = prompt("Введите день рождения:");
+	
+var birthday = new Date(year, (month-1), days);
+var today = Date.now();
+	
+var coldays = today - birthday; 
+
+console.log(coldays);
+input.value = Math.ceil(coldays / 86400000);
+}
+</script>
+</head>
+
+<body onLoad="happyYear()">
+Я прожил всего <input type="text" id="colDays" size="5"> дней
+</body>
+</html>

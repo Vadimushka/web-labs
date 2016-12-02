@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Лабораторная № 3: Вариант 2 - Задание 1</title>
+<meta charset="utf-8" />
+<script type="text/javascript">
+var year = prompt("Введите год рождения [xxxx]:");
+var month = prompt("Введите номер месяца рождения [1-12]:");
+var days = prompt("Введите день рождения:");
+	
+var birthday  = new Date(year, (month-1), days);
+
+var nameMonth = ["января", "февраля", "марта", "апреля", "мая", "июня", "июля", "августа", "сентебря", "октября", "ноября", "декабря"];
+var nameDay = ["воскресенье", "понедельник", "вторник", "среда", "четверг", "пятница", "суббота"];
+
+document.write("<h1>я родился " + birthday.getDate() + " " + nameMonth[birthday.getMonth()] + " " + birthday.getFullYear() + " года в " + nameDay[birthday.getDay()] + "</h1>");
+</script>
+</head>
+
+<body>
+
+</body>
+</html>

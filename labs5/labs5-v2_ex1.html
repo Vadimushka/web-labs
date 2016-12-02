@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Лабораторная № 5: Вариант 2 - Задание 1</title>
+<meta charset="utf-8" />
+<script type="text/javascript">
+function generated(){
+	var painter1 = document.getElementById('painter1');
+	var painter2 = document.getElementById('painter2');
+	var painter3 = document.getElementById('painter3');
+	
+	var title;
+	var img;
+	
+	if(painter1.selected){
+		title = '<h1>Айвазовский</h1>';
+		img = '<img src="Айвазовский.jpg" />';
+	}
+	if(painter2.selected){
+		title = '<h1>Репин</h1>';
+		img = '<img src="Репин.jpg" />';
+	}
+	if(painter3.selected){
+		title = '<h1>Тропинин</h1>';
+		img = '<img src="Тропинин.jpg" />';
+	}
+	
+	var	signature = document.getElementById('signature').value;
+	
+	var	imgFon1 = document.getElementById('imgFon1');
+	var	imgFon2 = document.getElementById('imgFon2');
+	var	imgFon3 = document.getElementById('imgFon3');
+	
+	var imageFon;
+	if(imgFon1.checked){
+		imageFon = 'background-image: url(fon1.gif); background-repeat: repeat;';
+	}
+	if(imgFon2.checked){
+		imageFon = 'background-image: url(fon2.gif); background-repeat: repeat;';
+	}
+	if(imgFon3.checked){
+		imageFon = 'background-image: url(fon3.gif); background-repeat: repeat;';
+	}
+	
+	
+	var italic = document.getElementById('italic');
+	var underline = document.getElementById('underline');
+	var bold = document.getElementById('bold');
+	
+	var font;
+	
+	if(italic.checked && !bold.checked && !underline.checked){
+		font = 'font-style: italic;';
+	}
+	
+	if(underline.checked && !bold.checked  && !italic.checked){
+		font = "text-decoration: underline;";
+	}
+	
+	if(bold.checked && !underline.checked && !italic.checked){
+		font = 'font-weight: bold;';
+	}
+	
+	if(italic.checked && bold.checked && !underline.checked){
+		font = 'font: bold italic 100% serif;';
+	}
+	if(underline.checked && bold.checked && !italic.checked){
+		font = 'font-weight: bold; text-decoration: underline;';
+	}
+	if(italic.checked && underline.checked && !bold.checked ){
+		font = 'font-style: italic;text-decoration: underline;';
+	}
+	if(italic.checked && bold.checked && underline.checked){
+		font = 'font: bold italic 100% serif;text-decoration: underline;';
+	}
+
+	
+	var style = '<head><style>body{' + imageFon + font + '}</style></head><body>';
+	
+	var win = window.open("", "", "width=600,height=600");
+	
+	win.document.open();
+	
+	win.document.write(style);
+	
+	win.document.write(title);
+	
+	win.document.write(img);
+	
+	str = '<p>' + signature + '</p>';
+	win.document.write(str);
+	
+	str = '<input type="button" value="Закрыть" onClick="window.close();" ></body>';
+	win.document.write(str);
+	
+	win.document.close();
+	
+}
+</script>
+<style>
+body {background-color: PaleGreen; font-weight: bold;}
+input {font-weight: bold}
+</style>
+</head>
+
+<body>
+<h1>Страничка по заказу</h1>
+<form>
+<table>
+<tr>
+<td>Художник:</td>
+<td><select>
+<option id="painter1">Айвазовский
+<option id="painter2">Репин
+<option id="painter3">Тропинин
+</select></tr>
+<tr>
+<td><label for="signature">Подпись: </label></td>
+<td><input type="text" id="signature"></td></tr>
+
+<tr>
+<td>Картинка для фона:</td>
+<td>Декорирование текста:</td>
+</tr>
+
+<tr>
+<td><input type="radio" id="imgFon1" name="img"><label for="imgFon1">Картинка 1</label> </td>
+<td><input type="checkbox" id="italic"><label for="italic">курсив</label></td>
+</tr>
+
+<tr>
+<td><input type="radio" id="imgFon2" name="img"><label for="imgFon2">Картинка 2</label> </td>
+<td><input type="checkbox" id="underline"><label for="underline">подчеркивание</label></td>
+</tr>
+
+<tr>
+<td><input type="radio" id="imgFon3" name="img"><label for="imgFon3">Картинка 3</label> </td>
+<td><input type="checkbox" id="bold"><label for="bold">жирный</label></td>
+</tr>
+
+
+<tr>
+<td><input type="reset" value="Сбросить"></td>
+<td><input type="button" value="Показать" onClick="generated()"></td>
+</tr>
+</table>
+</form>
+</body>
+</html>

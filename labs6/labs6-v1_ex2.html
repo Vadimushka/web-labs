@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Лабораторная № 6: Вариант 1 - Задание 2</title>
+<meta charset="utf-8" />
+<script type="text/javascript">
+i=0;
+function slideShow() {
+	ris = new Array('7.png', '8.png', '9.png', '6.png');
+	
+	if (i >= 4) i = 0;
+	r = document.getElementById('slide')
+	r.src = ris[i];
+	i++; 
+}
+</script>
+<style>
+img{width:200px;height:200px}
+</style>
+</head>
+
+<body>
+<h1> слайд-шоу </h1>
+<img id='slide' src="6.png" /><br>
+<br><input type="button" value=" Показать следующую " onClick="slideShow() ;">
+</body>
+</html>

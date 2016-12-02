@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Лабораторная № 5: Вариант 1 - Задание 1</title>
+<meta charset="utf-8" />
+<script type="text/javascript">
+function generated(){
+	var title = document.getElementById('title').value,
+		signature = document.getElementById('signature').value;
+		
+	var dog = document.getElementById('dog');
+	var flower = document.getElementById('flower');
+	var bigdaisy = document.getElementById('bigdaisy');
+	
+	var img;
+	if(dog.checked){
+		img = '<img src="dog.jpg" />';
+	}
+	
+	if(flower.checked){
+		img = '<img src="flower.jpg" />';
+	}
+	
+	if(bigdaisy.checked){
+		img = '<img src="bigdaisy.png" />';
+	}
+	
+	
+	var backroungBlue = document.getElementById('backroungBlue');
+	var backroungWhite = document.getElementById('backroungWhite');
+	var backroungBlack = document.getElementById('backroungBlack');
+	
+	var backgroundColor;
+	if(backroungBlue.selected){
+		backgroundColor = backroungBlue.value;
+	}
+	if(backroungWhite.selected){
+		backgroundColor = backroungWhite.value;
+	}
+	if(backroungBlack.selected){
+		backgroundColor = backroungBlack.value;
+	}
+	
+	
+	
+	var	colorWhite = document.getElementById('colorWhite');
+	var	colorBlack = document.getElementById('colorBlack');
+	var	colorBlue = document.getElementById('colorBlue');
+		
+	var color;
+	if(colorBlue.checked){
+		color = 'blue';
+	}
+	if(colorWhite.checked){
+		color = 'white';
+	}
+	if(colorBlack.checked){
+		color = 'black';
+	}
+	console.log(color);
+	
+	var style = '<head><style>body{background-color:' + backgroundColor + '; color: '  + color + ';}</style></head><body>';
+	
+	var win = window.open("", "", "width=1000,height=800");
+	
+	win.document.open();
+	
+	win.document.write(style);
+	
+	var str = '<h1>' + title + '</h1>';
+	win.document.write(str);
+	
+	
+	win.document.write(img);
+	
+	str = '<p>' + signature + '</p>';
+	win.document.write(str);
+	
+	str = '<input type="button" value="Закрыть" onClick="window.close();" ></body>';
+	win.document.write(str);
+	
+	win.document.close();
+	
+}
+</script>
+<style>
+body {background-color: PaleGreen; font-weight: bold;}
+input {font-weight: bold}
+</style>
+</head>
+
+<body>
+<h1>Страничка по заказу</h1>
+<form>
+<table>
+
+<tr>
+<td><label for="title">Заголовок: </label></td>
+<td><input type="text" id="title" size="20"></td>
+</tr>
+
+<tr>
+<td rowspan="3">Картинка: </td>
+<td><input type="checkbox" id="dog"><label for="place">Собака</label></td>
+</tr>
+
+<tr>
+<td><input type="checkbox" id="flower"><label for="flower">Одинокий цветок</label></td>
+</tr>
+
+<tr>
+<td><input type="checkbox" id="bigdaisy"><label for="bigdaisy">Букет</label></td>
+</tr>
+
+<tr>
+<td><label for="signature">Подпись: </label></td>
+<td><input type="text" id="signature" size="35"></td>
+</tr>
+
+<tr>
+<td>Цвет фона</td>
+<td style="padding-left: 72px">Цвет текста</td>
+</tr>
+
+<tr>
+<td>
+<select>
+<option id="backroungBlue" value="blue"> Синий
+<option id="backroungWhite" value="white"> Белый
+<option id="backroungBlack" value="black"> Черный
+</select>
+</td>
+<td><label for="colorWhite"><img src="white.jpg"></label> <input type="radio" id="colorWhite" name="color_text"></td>
+</tr>
+
+<tr>
+<td></td>
+<td><label for="colorBlack"><img src="black.jpg"></label> <input type="radio" id="colorBlack" name="color_text"></td>
+</tr>
+
+<tr>
+<td></td>
+<td><label for="colorBlue"><img src="blue.jpg"></label> <input type="radio" id="colorBlue" name="color_text"></td>
+</tr>
+
+<tr>
+<td><input type="reset" value="Сбросить"></td>
+<td><input type="button" value="Показать" onClick="generated()"></td>
+</tr>
+
+</table>
+
+
+<hr>
+</form>
+</body>
+</html>

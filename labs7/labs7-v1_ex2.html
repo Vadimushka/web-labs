@@ -4,7 +4,24 @@
 <title>Лабораторная № 7: Вариант 1 - Задание 2</title>
 <meta charset="utf-8" />
 <script type="text/javascript">
+i = 0;
 function changeTextToImg(){
+text = document.getElementById('text');
+img = document.getElementById('img');
+el = document.getElementById('el');
+
+	if (i == 0){
+		img.style.display = "block"
+		text.style.display = "none"
+		el.value = 'Показать текст';
+		i = 1;
+	} else {
+		img.style.display = "none"
+		text.style.display = "block"
+		el.value = 'Показать свечу';
+		i = 0;
+	}
+
 }
 </script>
 <style>
@@ -12,33 +29,47 @@ body{
 background-color: blue;
 color: white;
 }
+.borderText{
+border: 5px outset #ffa089;
+width: 300px;
+}
+.borderImg{
+border: 50px outset #ffa089;
+margin: 5px;
+}
 </style>
 </head>
 
 <body>
-<input type="button" onClick="changeTextToImg();" value="Показать свечу">
+<input type="button" onClick="changeTextToImg();" id="el" value="Показать свечу">
 <p>Иннокентий Анненский</p>
 <h1>Свечку внесли</h1>
 <div class="borderText" id="text">
-Не мерещится ль вам иногда,<br>
-Когда сумерки ходят по дому,<br>
-Тут же возле иная среда,<br>
-Где живем мы совсем по-другому?<br>
-<br>
-С тенью тень там так мягко слилась,<br>
-Там бывает такая минута,<br>
-Что лучами незримыми глаз<br>
-Мы уходим друг в друга как будто.<br>
-<br>
-И движеньем спугнуть этот миг<br>
-Мы боимся, иль словом нарушить,<br>
-Точно ухом кто возле приник,<br>
-Заставляя далекое слушать.<br>
-<br>
-Но едва запылает свеча,<br>
-Чуткий мир уступает без боя,<br>
-Лишь из глаз по наклонам луча<br>
-Тени в пламя сбегут голубое.<br>
+	<p>Не мерещится ль вам иногда, <br>
+	Когда сумерки ходят по дому, <br>
+	Тут же возле иная среда,<br>
+	Где живем мы совсем по-другому?</p>
+
+	<p>С тенью тень там так мягко слилась,<br>
+	Там бывает такая минута,<br>
+	Что лучами незримыми глаз<br>
+	Мы уходим друг в друга как будто.</p>
+
+	<p>И движеньем спугнуть этот миг<br>
+	Мы боимся, иль словом нарушить,<br>
+	Точно ухом кто возле приник,<br>
+	Заставляя далекое слушать.</p>
+
+	<p>Но едва запылает свеча,<br>
+	Чуткий мир уступает без боя,<br>
+	Лишь из глаз по наклонам луча<br>
+	Тени в пламя сбегут голубое.</p>
 </div>
+<div id="img" style="display: none;">
+<img src="svechka.jpg" class="borderImg" >
+</div>
+
+
+
 </body>
 </html>
